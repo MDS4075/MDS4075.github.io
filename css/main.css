@@ -3,6 +3,6 @@ body {
 	margin: 0px;
 }
 
-.CatPic, img{
+img.CatPic {
 	width: 100%;
 }
