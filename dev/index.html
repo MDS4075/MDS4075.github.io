@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<!-- <link type="text/css" rel="stylesheet" href="css/main.css"> -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div id="images"></div>
+	
+		<script>
+			var imgUrlBase = "http://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg";
+		
+			(function() {
+			  var flickerAPI = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=570a74c8054a01c476abea1edcf08fbd&text=cat&format=json&nojsoncallback=1";
+			  $.getJSON( flickerAPI, function(response, status, jqXHR){
+					//console.log(jqXHR.responseText);
+					console.log(response.photos.photo);
+					
+					$.each(response.photos.photo, function(i, item) {
+						var imgUrl = "http://farm" + item.farm + ".staticflickr.com/" + item.server + "/" + item.id + "_" + item.secret + ".jpg";
+						$( "<img>" ).attr( "src", imgUrl ).appendTo( "#images" );
+						console.log(imgUrl);
+					});
+				});
+			})();
+		</script>
+	</body>
+</html>
