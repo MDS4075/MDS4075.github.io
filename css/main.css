@@ -3,11 +3,8 @@ body {
 	margin: 0px;
 }
 
-.CatPic {
-	border-bottom: 3px #000 solid;
-}
-
 .CatPic img{
 	width: 100%;
 	display: block;
+	border-bottom: 3px #000 solid;
 }
