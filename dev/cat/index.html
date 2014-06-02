@@ -15,7 +15,7 @@
 			  var flickerAPI = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=467efe39db0425dcccde0a74c2a7e8a9&tags=cats&sort=relevance&per_page=500&format=json&nojsoncallback=1";
 			  $.getJSON( flickerAPI, function(response, status, jqXHR){
 					//console.log(jqXHR.responseText);
-					console.log(response.photos.photo);
+					console.log(response.photos);
 					
 					$.each(response.photos.photo, function(i, item) {
 						var imgUrl = "http://farm" + item.farm + ".staticflickr.com/" + item.server + "/" + item.id + "_" + item.secret + ".jpg";
