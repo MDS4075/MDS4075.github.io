@@ -5,4 +5,9 @@ body {
 
 .CatPic img{
 	width: 100%;
+	display: block;
+}
+
+.CatPic a {
+	border-bottom: 3px #000 solid;
 }
