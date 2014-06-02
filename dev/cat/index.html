@@ -12,7 +12,7 @@
 			var imgUrlBase = "http://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg";
 		
 			(function() {
-			  var flickerAPI = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=570a74c8054a01c476abea1edcf08fbd&text=cat&format=json&nojsoncallback=1";
+			  var flickerAPI = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=467efe39db0425dcccde0a74c2a7e8a9&tags=cats&sort=relevance&per_page=500&format=json&nojsoncallback=1";
 			  $.getJSON( flickerAPI, function(response, status, jqXHR){
 					//console.log(jqXHR.responseText);
 					console.log(response.photos.photo);
