@@ -13,6 +13,7 @@
 		
 			(function() {
 			  var flickerAPI = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=1122abb61d3fe249015b71bc3b3ac264&tags=cats&sort=relevance&per_page=500&format=json&nojsoncallback=1";
+			  //var flickerAPI = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=1122abb61d3fe249015b71bc3b3ac264&text=\"canada nature\"&sort=relevance&per_page=500&format=json&nojsoncallback=1";
 			  $.getJSON( flickerAPI, function(response, status, jqXHR){
 					//console.log(jqXHR.responseText);
 					console.log(response);
